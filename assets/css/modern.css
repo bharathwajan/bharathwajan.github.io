@@ -1,0 +1,300 @@
+/* Modern Overrides */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --theme-orange: #f97316;
+    --gradient-start: #f97316;
+    --gradient-end: #ec4899;
+    --dark-bg: #0f172a;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --glass-bg: rgba(255, 255, 255, 0.08);
+    --glass-border: rgba(255, 255, 255, 0.12);
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --section-bg: #1e293b;
+}
+
+body {
+    font-family: 'Inter', sans-serif !important;
+    background: var(--dark-bg);
+    color: var(--text-primary);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+/* Hero Section */
+.vg-page.page-home {
+    background: linear-gradient(135deg, var(--dark-bg) 0%, #1e1b4b 50%, var(--dark-bg) 100%) !important;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.vg-page.page-home::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(ellipse at 30% 20%, rgba(249, 115, 22, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 80%, rgba(236, 72, 153, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.caption-header h1 {
+    font-size: 3.5rem !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.02em;
+}
+
+.caption-header h5 {
+    color: var(--text-secondary) !important;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.85rem !important;
+}
+
+.caption-header .badge {
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)) !important;
+    color: white !important;
+    padding: 8px 24px !important;
+    border-radius: 50px !important;
+    font-size: 0.9rem !important;
+    font-weight: 500;
+    border: none !important;
+}
+
+/* Navbar */
+.navbar {
+    backdrop-filter: blur(20px) !important;
+    background: rgba(15, 23, 42, 0.8) !important;
+    border-bottom: 1px solid var(--glass-border);
+    transition: all 0.3s ease;
+}
+
+.navbar .nav-link {
+    font-weight: 500 !important;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease !important;
+}
+
+.btn-theme, .btn.btn-theme {
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)) !important;
+    border: none !important;
+    border-radius: 50px !important;
+}
+
+/* About Section */
+.vg-page.page-about {
+    background: var(--dark-bg) !important;
+    color: var(--text-primary) !important;
+}
+
+.page-about h1 {
+    color: var(--text-primary) !important;
+    font-weight: 600 !important;
+}
+
+.page-about h5.fg-theme {
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.page-about .text-muted {
+    color: var(--text-secondary) !important;
+    line-height: 1.8;
+}
+
+.page-about .theme-list li {
+    color: var(--text-secondary);
+    padding: 6px 0;
+}
+
+.page-about .theme-list li b {
+    color: var(--text-primary);
+}
+
+.page-about .img-place img {
+    border-radius: 20px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+    border: 3px solid var(--glass-border);
+    transition: transform 0.4s ease;
+}
+
+.page-about .img-place img:hover {
+    transform: scale(1.02);
+}
+
+.btn-theme-outline {
+    border: 2px solid var(--gradient-start) !important;
+    color: var(--gradient-start) !important;
+    border-radius: 50px !important;
+    padding: 10px 30px !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+    background: transparent !important;
+}
+
+.btn-theme-outline:hover {
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)) !important;
+    color: white !important;
+    border-color: transparent !important;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(249, 115, 22, 0.3);
+}
+
+/* Timeline */
+.timeline li .title {
+    color: var(--gradient-start) !important;
+    font-weight: 600;
+}
+
+.timeline li .details h5 {
+    color: var(--text-primary) !important;
+}
+
+.timeline li .details small {
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.timeline li .details p {
+    color: var(--text-secondary);
+}
+
+h2.fw-normal {
+    color: var(--text-primary) !important;
+    font-weight: 600 !important;
+}
+
+/* Service Section */
+.vg-page.page-service {
+    background: var(--section-bg) !important;
+    padding: 80px 0;
+}
+
+.page-service h1 {
+    color: var(--text-primary) !important;
+}
+
+.page-service .badge-subhead {
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)) !important;
+    color: white !important;
+    padding: 6px 18px !important;
+    border-radius: 50px !important;
+    font-size: 0.8rem !important;
+    border: none !important;
+}
+
+.card-service {
+    background: var(--glass-bg) !important;
+    border: 1px solid var(--glass-border) !important;
+    border-radius: 20px !important;
+    padding: 30px !important;
+    backdrop-filter: blur(10px);
+    transition: all 0.4s ease !important;
+    height: 100%;
+}
+
+.card-service:hover {
+    transform: translateY(-8px) !important;
+    border-color: var(--gradient-start) !important;
+    box-shadow: 0 20px 40px rgba(249, 115, 22, 0.15) !important;
+}
+
+.card-service .icon span {
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.card-service .caption h4 {
+    color: var(--text-primary) !important;
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+}
+
+.card-service .caption p {
+    color: var(--text-secondary) !important;
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+/* Contact Section */
+.vg-page.page-contact {
+    background: var(--dark-bg) !important;
+}
+
+.page-contact h1 {
+    color: var(--text-primary) !important;
+}
+
+.page-contact .badge-subhead {
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)) !important;
+    color: white !important;
+    border-radius: 50px !important;
+    border: none !important;
+}
+
+/* Footer */
+.vg-footer {
+    background: var(--section-bg) !important;
+    border-top: 1px solid var(--glass-border);
+    color: var(--text-secondary) !important;
+}
+
+.vg-footer p, .vg-footer a, .vg-footer li {
+    color: var(--text-secondary) !important;
+}
+
+.vg-footer a:hover {
+    color: var(--gradient-start) !important;
+}
+
+.vg-footer .divider {
+    border-color: var(--glass-border) !important;
+}
+
+/* Floating elements */
+.floating-button {
+    color: var(--text-secondary) !important;
+}
+
+.btn-back_to_top {
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)) !important;
+    border-radius: 50% !important;
+    box-shadow: 0 5px 20px rgba(249, 115, 22, 0.4) !important;
+}
+
+/* Smooth scrollbar and selection */
+::selection {
+    background: var(--gradient-start);
+    color: white;
+}
+
+/* Animations */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.floating-button {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .caption-header h1 {
+        font-size: 2.2rem !important;
+    }
+}
